@@ -1,6 +1,6 @@
 {
-  "description": "Changes the Wikipedia user interface to the beautiful old vector layout. Is also applied to the other international Wikimedia pages.",
-  "author": "Christian Zei",
+  "description": "Changes the Wikipedia user interface to the monobook layout. Is also applied to the other international Wikimedia pages.",
+  "author": "Christian Zei, Mr_Minderbinder",
   "manifest_version": 3,
   "name": "Old Wiki",
   "short_name": "OldWiki",
@@ -12,12 +12,12 @@
   },
   "declarative_net_request" : {
     "rule_resources" : [{
-      "id": "apply_vector_skin",
+      "id": "apply_monobook_skin",
       "enabled": true,
       "path": "rules/apply.json"
     },
     {
-      "id": "remove_vector_skin",
+      "id": "remove_monobook_skin",
       "enabled": false,
       "path": "rules/remove.json"
     }]

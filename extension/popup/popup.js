@@ -3,16 +3,16 @@
 //for compatibility reasons
 var browser = chrome;
 
-var vectorSkinActivation = true;
+var monobookSkinActivation = true;
 
-var vectorSkinActivationSwitch = document.getElementById("vectorSkinActivationSwitch");
+var monobookSkinActivationSwitch = document.getElementById("monobookSkinActivationSwitch");
 
 // load stored settings from local storage
 browser.storage.local.get((items) => {
-	vectorSkinActivation = items.hasOwnProperty('vector_skin_activation') ? items.vector_skin_activation : true;
+	monobookSkinActivation = items.hasOwnProperty('monobook_skin_activation') ? items.monobook_skin_activation : true;
 
-	vectorSkinActivationSwitch.checked = vectorSkinActivation;
-	vectorSkinActivationSwitch.addEventListener("change", activationSwitchChanged);
+	monobookSkinActivationSwitch.checked = monobookSkinActivation;
+	monobookSkinActivationSwitch.addEventListener("change", activationSwitchChanged);
 });
 
 /**
@@ -20,8 +20,8 @@ browser.storage.local.get((items) => {
  */
 function activationSwitchChanged() {
 	// apply skin or not
-	vectorSkinActivation = vectorSkinActivationSwitch.checked;
-	browser.storage.local.set({vector_skin_activation: vectorSkinActivationSwitch.checked});
+	monobookSkinActivation = monobookSkinActivationSwitch.checked;
+	browser.storage.local.set({monobook_skin_activation: monobookSkinActivationSwitch.checked});
 }
 
 /**

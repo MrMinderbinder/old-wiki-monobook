@@ -3,7 +3,7 @@
 // for compatibility reasons
 var browser = chrome;
 
-var vectorSkinActivation = true;
+var monobookSkinActivation = true;
 
 /**
  * Loads the current settings.
@@ -39,7 +39,7 @@ function onSettingsLoaded(items) {
  * @param {[key: string]: any} items The items from the local storage.
  */
 function parseSettings(items) {
-    vectorSkinActivation = items.hasOwnProperty('vector_skin_activation') ? items.vector_skin_activation : true;
+    monobookSkinActivation = items.hasOwnProperty('monobook_skin_activation') ? items.monobook_skin_activation : true;
 }
 
 /**
@@ -48,7 +48,7 @@ function parseSettings(items) {
  * @param {[key: string]: any} items The items from the local storage.
  */
  function parseChangedSettings(items) {
-    vectorSkinActivation = items.hasOwnProperty('vector_skin_activation') ? items.vector_skin_activation.newValue : true;
+    monobookSkinActivation = items.hasOwnProperty('monobook_skin_activation') ? items.monobook_skin_activation.newValue : true;
 }
 
 /**
@@ -58,12 +58,12 @@ function updateEnabledRulesets() {
     let disableRulesetIds = [];
     let enableRulesetIds = [];
 
-    if (vectorSkinActivation) {
-        enableRulesetIds.push("apply_vector_skin");
-        disableRulesetIds.push("remove_vector_skin");
+    if (monobookSkinActivation) {
+        enableRulesetIds.push("apply_monobook_skin");
+        disableRulesetIds.push("remove_monobook_skin");
     } else {
-        enableRulesetIds.push("remove_vector_skin");
-        disableRulesetIds.push("apply_vector_skin");
+        enableRulesetIds.push("remove_monobook_skin");
+        disableRulesetIds.push("apply_monobook_skin");
     }
 
     browser.declarativeNetRequest.updateEnabledRulesets({

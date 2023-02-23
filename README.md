@@ -4,7 +4,7 @@
 This is a extension for common web browsers coded using the WebExtensions API.
 
 ## Main Features
-This extension simply changes the Wikipedia user interface to the beautiful old vector layout. It is also applied to the other international Wikimedia pages.
+This extension simply changes the Wikipedia user interface to the monobook layout. It is also applied to the other international Wikimedia pages.
 
 Supported [Wikimedia projects](https://meta.wikimedia.org/wiki/Our_projects):
 - Wikipedia
@@ -24,13 +24,10 @@ Supported [Wikimedia projects](https://meta.wikimedia.org/wiki/Our_projects):
 - Wikimedia Cloud Services
 
 ### How?
-The extension simply adds "?useskin=vector" to the end of each HTTP request to use the old vector skin.
+The extension simply adds "?useskin=monobook" to the end of each HTTP request to use the old monobook skin.
 
 ### Which browser to use?
 The extension can be added into Chrome, Edge, Brave and Opera. Unfortunately, Firefox is not supported because Firefox does not currently support the delarativeNetRequest API. Nevertheless, we are releasing Firefox-compatible builds so that you can use the extension as soon as Mozilla adds support for delarativeNetRequest to Firefox.
-
-#### Chrome Web Store
-[Old Wiki at the Chrome Web Store](https://chrome.google.com/webstore/detail/old-wiki/cphagceemhgokfclmbnkpfkmchbfnclb)
 
 <!-- #### Firefox Add-ons (AMO)
 [Old Wiki at AMO]() -->
@@ -69,31 +66,3 @@ If you like my work, you can support me via [PayPal](https://www.paypal.me/Chris
 
 ## Acknowledgements
 Thanks to everyone using, supporting and contributing to the extension.
-
-## What's new?
-
-##### v1.0
-- Append "?useskin=vector" to the end of each HTTP request.
-
-##### v1.1
-- Apply the vector skin to the remaining international Wikimedia pages:
-    - Wiktionary
-    - Wikiquote
-    - Wikibooks
-    - Wikisource
-    - Wikispecies
-    - Wikinews
-    - Wikiversity
-    - Wikivoyage
-    - Wikimedia Commons
-    - Wikidata
-    - MediaWiki
-    - Meta-Wiki
-    - Wikimedia Incubator
-    - Wikimedia Cloud Services
-
-##### v1.2
-- A popup was added to activate or deactivate the vector skin.
-
-##### v1.3
-- Fix popup font size for Windows
